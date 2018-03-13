@@ -1,0 +1,35 @@
+{
+  "name": "ajax",
+  "license": "MIT",
+  "description": "This is a helper class for sending Ajax requests from the client side. Works similar to the jQuery ajax() function with better support for response parsing, error handling and upload progress.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Rainner Lins",
+    "email": "info@rainnerlins.com",
+    "url": "https://rainnerlins.com"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --watch --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rainner/ajax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rainner/ajax/issues"
+  },
+  "homepage": "https://github.com/rainner/ajax#readme",
+  "main": "src/ajax.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "cross-env": "^3.0.0",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.11.2"
+  }
+}

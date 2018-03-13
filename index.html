@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ajax JS</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="This is a helper class for sending Ajax requests from the client side." />
+    <meta name="author" content="Rainner Lins | @raintek_ | https://rainnerlins.com | https://github.com/rainner" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+</head>
+<body>
+
+  <div class="container">
+    <p>&nbsp;</p>
+  </div>
+
+  <div class="container">
+    <h1>Ajax Test Form</h1>
+    <hr />
+
+    <form id="ajaxform" class="row" action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
+      <div class="col-sm">
+
+        <div class="form-group">
+          <label for="_endpoint">Request URL</label>
+          <input id="_endpoint" name="_endpoint" value="" type="text" class="form-control" placeholder="/..." required />
+        </div>
+
+        <div class="form-group">
+          <label for="_method">Request Method</label>
+          <select id="_method" name="_method" class="form-control">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="DELETE">DELETE</option>
+            <option value="PATCH">PATCH</option>
+            <option value="OPTIONS">OPTIONS</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="_type">Response Type</label>
+          <select id="_type" name="_type" class="form-control">
+            <option value="text">text</option>
+            <option value="json">json</option>
+            <option value="blob">blob</option>
+            <option value="document">document</option>
+            <option value="arraybuffer">arraybuffer</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="_ctype">Content Type</label>
+          <select id="_ctype" name="_ctype" class="form-control">
+            <option value="formdata">form-data</option>
+            <option value="urlencoded">form-urlencoded</option>
+            <option value="json">json</option>
+          </select>
+        </div>
+
+        <div class="form-group" data-pairs="#headers-data">
+          <label>Request Headers</label>
+          <div class="form-row">
+            <div class="col-sm-4"><input type="text" class="form-control" placeholder="Name" /></div>
+            <div class="col-sm-6"><input type="text" class="form-control" placeholder="Value" /></div>
+            <div class="col-sm-2"><button type="button" class="btn btn-default">+ Add</button></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <ul id="headers-data" class="text-success"></ul>
+        </div>
+
+        <div class="form-group" data-pairs="#params-data">
+          <label>Request Params</label>
+          <div class="form-row">
+            <div class="col-sm-4"><input type="text" class="form-control" placeholder="Name" /></div>
+            <div class="col-sm-6"><input type="text" class="form-control" placeholder="Value" /></div>
+            <div class="col-sm-2"><button type="button" class="btn btn-default">+ Add</button></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <ul id="params-data" class="text-success"></ul>
+        </div>
+
+        <div class="form-group">
+          <label for="_files">Request Files</label>
+          <input id="_files" name="_files[]" type="file" class="form-control" multiple />
+        </div>
+
+        <div class="form-group">
+          <div class="progress">
+            <div id="progressbar" class="progress-bar"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Send Request</button> &nbsp;
+          <button type="reset" class="btn btn-default">Reset Form</button>
+        </div>
+
+      </div>
+      <div class="col-sm">
+
+        <div class="form-group">
+          <label>Response status</label>
+          <input id="status" class="form-control" type="text" readonly></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Response headers</label>
+          <textarea id="headers" class="form-control" rows="5" style="white-space: pre; overflow: auto;" readonly></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Response error</label>
+          <textarea id="error" class="form-control" rows="2" readonly></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Response body</label>
+          <textarea id="output" class="form-control" rows="20" style="white-space: pre; overflow: auto;" readonly></textarea>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+  <div class="container">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+
+  <!-- app scripts -->
+  <script src="public/app.min.js"></script>
+</body>
+</html>
