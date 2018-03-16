@@ -24,13 +24,13 @@
 
         <div class="form-group">
           <label for="_endpoint">Request URL</label>
-          <input id="_endpoint" name="_endpoint" value="" type="text" class="form-control" placeholder="/..." required />
+          <input id="_endpoint" name="_endpoint" value="/" type="text" class="form-control" placeholder="/..." required />
         </div>
 
         <div class="form-group">
           <label for="_method">Request Method</label>
           <select id="_method" name="_method" class="form-control">
-            <option value="GET">GET</option>
+            <option value="GET" selected>GET</option>
             <option value="POST">POST</option>
             <option value="PUT">PUT</option>
             <option value="DELETE">DELETE</option>
@@ -42,7 +42,7 @@
         <div class="form-group">
           <label for="_type">Response Type</label>
           <select id="_type" name="_type" class="form-control">
-            <option value="text">text</option>
+            <option value="text" selected>text</option>
             <option value="json">json</option>
             <option value="blob">blob</option>
             <option value="document">document</option>
@@ -135,6 +135,6 @@
   </div>
 
   <!-- app scripts -->
-  <script src="public/app.min.js"></script>
+  <script src="public/bundles/app.min.js"></script>
 </body>
 </html>
