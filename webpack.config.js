@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: path.join( __dirname, '/' ),
     publicPath: '/',
-    filename: 'public/[name].min.js',
+    filename: 'public/bundles/[name].min.js',
   },
   module: {
     rules: [
